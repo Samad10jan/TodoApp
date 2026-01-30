@@ -81,7 +81,6 @@ export default function Home() {
           justifyContent: "flex-start",
           gap: "20px",
           borderRadius: "25px",
-          fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
           fontSize: "18px",
           overflow: "hidden",
 
