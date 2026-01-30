@@ -69,24 +69,39 @@ export default function Home() {
       {(
         <div style={{
           position: "fixed",
-          padding: "19px",
+          top: "20px",
+          left: "20px",
+          padding: "25px",
+          width: "340px",
+          height: "85vh",
+          color: "#fff",
           backgroundColor: "black",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "5px",
-          fontSize: "30px",
-          width: "350px",
-          height: "90vh",
+          justifyContent: "flex-start",
+          gap: "20px",
+          borderRadius: "25px",
+          fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+          fontSize: "18px",
           overflow: "hidden",
-          color: "white",
-          borderRadius: "20px"
+
+
         }}>
-          <span>Total: {todos.length}</span>
-          <span>Completed: {todos.filter(t => t.isCompleted).length}</span>
-          <span>Pending: {todos.filter(t => !t.isCompleted).length}</span>
+          <h2 style={{ margin: 0, fontSize: "24px", borderBottom: "1px solid #333", paddingBottom: "10px" }}>Todo Stats</h2>
+          <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0" }}>
+            <span>Total</span>
+            <span>{todos.length}</span>
+          </div>
+          <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0" }}>
+            <span>Completed</span>
+            <span>{todos.filter(t => t.isCompleted).length}</span>
+          </div>
+          <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0" }}>
+            <span>Pending</span>
+            <span>{todos.filter(t => !t.isCompleted).length}</span>
+          </div>
         </div>
+
       )}
 
       <div style={{
@@ -126,10 +141,12 @@ export default function Home() {
             backgroundColor: "black",
             color: "white",
             fontWeight: "600",
-            padding: "24px",
+            padding: "25px",
             fontSize: "28px",
             borderRadius: "12px",
-            marginBottom: "5px"
+            marginBottom: "5px",
+
+
           }}>
             Add Todo
           </h1>
@@ -179,7 +196,11 @@ export default function Home() {
 
         <div style={{
           padding: todos.length === 0 ? "40px 24px" : "12px",
-          minHeight: "200px"
+          minHeight: "200px",
+          backgroundColor: "lightyellow",
+          backgroundImage: "radial-gradient(circle, grey 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+
         }}>
 
           {todos.length === 0 ? (
@@ -187,7 +208,8 @@ export default function Home() {
               textAlign: "center",
               color: "darkgray",
               fontSize: "28px",
-              padding: "40px 0"
+              padding: "40px 0",
+
             }}>
               No tasks yet. Add one to get started!
             </div>
