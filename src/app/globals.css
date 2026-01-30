@@ -1,0 +1,14 @@
+@import "tailwindcss";
+div {
+  display: block;
+  justify-content: center;
+}
+
+button {
+  height: "50px";
+  margin: "20px";
+  padding: "3px";
+  font-size: "15px";
+  width:"25px" ;
+  
+}
